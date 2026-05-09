@@ -1,0 +1,191 @@
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do site */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #dfe9f3);
+    color: #222;
+    transition: 0.3s;
+}
+
+/* Tema escuro */
+body.dark {
+    background: linear-gradient(135deg, #121212, #1f1f1f);
+    color: white;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00bfff;
+}
+
+/* Botão tema */
+#temaBtn {
+    margin-top: 15px;
+}
+
+/* Seções */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+
+    /* Corrige posição da navegação */
+    scroll-margin-top: 120px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* Foto de perfil */
+.fotoPerfil {
+    width: 180px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Cards e projetos */
+.card,
+.projeto {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* Hover */
+.card:hover,
+.projeto:hover {
+    transform: translateY(-5px);
+}
+
+/* Tema escuro nos cards */
+body.dark .card,
+body.dark .projeto {
+    background-color: #1f1f1f;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Focus nos campos */
+input:focus,
+textarea:focus {
+    outline: 2px solid #0077ff;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Botões */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #0077ff;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Links */
+a {
+    color: #0077ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .fotoPerfil {
+        width: 140px;
+    }
+}
